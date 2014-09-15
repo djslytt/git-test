@@ -1,0 +1,189 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\809002496>cd /git-test
+
+C:\GIT-Test>git int
+git: 'int' is not a git command. See 'git --help'.
+
+Did you mean this?
+        init
+
+C:\GIT-Test>y
+'y' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\GIT-Test>git init
+Initialized empty Git repository in C:/GIT-Test/.git/
+
+C:\GIT-Test>git remote add origin https://github.com/djslytt/git-test.git
+
+C:\GIT-Test>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Instructions.txt
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\GIT-Test>git add README.md
+
+C:\GIT-Test>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Instructions.txt
+
+
+C:\GIT-Test>git commit
+Aborting commit due to empty commit message.
+
+C:\GIT-Test>git commit -m "Adding my README"
+[master (root-commit) b81af3f] Adding my README
+ Committer: unknown <809002496@STADCITWKS715.sastudents.uwi.tt>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+C:\GIT-Test>git configure --global user.name "djslytt"
+git: 'configure' is not a git command. See 'git --help'.
+
+C:\GIT-Test>git config --global user.name "djslytt"
+
+C:\GIT-Test>git config --global user.email djslytt@gmail.com
+
+C:\GIT-Test>git commit -m "Adding my README"
+On branch master
+Untracked files:
+        Instructions.txt
+
+nothing added to commit but untracked files present
+
+C:\GIT-Test>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Instructions.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\GIT-Test>git add -A
+
+C:\GIT-Test>status
+'status' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\GIT-Test>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Instructions.txt
+        modified:   README.md
+
+
+C:\GIT-Test>git commit -m "Adding my README"
+[master 75195cb] Adding my README
+ 2 files changed, 1 insertion(+)
+ create mode 100644 Instructions.txt
+
+C:\GIT-Test>git status
+On branch master
+nothing to commit, working directory clean
+
+C:\GIT-Test>git push -u origin master
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: Anonymous access to djslytt/git-test.git denied.
+fatal: Authentication failed for 'https://github.com/djslytt/git-test.git/'
+
+C:\GIT-Test>.git
+'.git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\GIT-Test>
+C:\GIT-Test>.git
+'.git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\GIT-Test>git push -u origin master
+Username for 'https://github.com': djslytt
+Password for 'https://djslytt@github.com':
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 512 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/djslytt/git-test.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\GIT-Test>git add -A
+
+C:\GIT-Test>git commit -m "Adding 2 files"
+[master 9dfaeb7] Adding 2 files
+ 2 files changed, 2 insertions(+)
+ create mode 100644 Something 2
+ create mode 100644 Something 3
+
+C:\GIT-Test>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+
+C:\GIT-Test>git push -u origin master
+Username for 'https://github.com': djslytt
+Password for 'https://djslytt@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/djslytt/git-test.git/'
+
+C:\GIT-Test>git push -u origin master
+Username for 'https://github.com': djslytt
+Password for 'https://djslytt@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 367 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/djslytt/git-test.git
+   75195cb..9dfaeb7  master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\GIT-Test>cd /GIT-test2
+
+C:\GIT-test2>git clone https://github.com/djslytt/git-test.git
+Cloning into 'git-test'...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 1), reused 9 (delta 0)
+Unpacking objects: 100% (10/10), done.
+Checking connectivity... done.
+
+C:\GIT-test2>
